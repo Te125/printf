@@ -41,6 +41,7 @@ int handle_specifier(void);
 int print_binary(unsigned int num, char *buffer);
 int print_string(const char *str, char *buffer);
 int print_argument(const char **format, va_list args);
+int get-flags(const char *format, int *i);
 
 #endif /* PRINTF_H */
 
