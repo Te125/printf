@@ -1,8 +1,6 @@
 #include "printf.h"
-#include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
 
 /**
  * print_unsigned - integer
@@ -65,7 +63,7 @@ void print_hex(va_list args)
 
 	sprintf(hex_str, "%x", hex_num);
 
-	_puts(hex_str);
+	puts(hex_str);
 
 	free(hex_str);
 }

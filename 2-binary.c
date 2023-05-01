@@ -49,7 +49,7 @@ int handle_binary(va_list args, char *buffer, int pos)
 	if (binary == NULL)
 		return (-1);
 
-	pos = print_string(binary, buffer);
+	pos += sprintf(&buffer[pos], "%s", binary);
 
 	free(binary);
 	return (pos);

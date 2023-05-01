@@ -1,8 +1,5 @@
 #include "printf.h"
-#include <stdarg.h>
 #include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
 
 int handle_specifier(va_list *args, char specifier, char *buffer, int *count);
 void write_buffer(char *buffer, int *count);

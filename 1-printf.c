@@ -1,10 +1,33 @@
 #include "printf.h"
-#include <stdarg.h>
 #include <stdio.h>
-#include <stdlib.h>
+#include <unistd.h>
 
+int printf(const char *format, ...);
 int _putchar(char c);
 int _puts(char *str);
+
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+
+int _puts(char *str)
+{
+	int i;
+
+	for (i = 0; str[1]; i++)
+	{
+		_putchar(str[i]);
+	}
+	return (i);
+}
+
+/**
+ * _printf - main
+ * @format: string
+ *
+ * Return: number of characters
+ */
 
 int _printf(const char *format, ...)
 {

@@ -35,13 +35,25 @@ int count_hex_digits(unsigned int num);
 int print_hexadecimal(va_list args);
 int print_hex_upper(va_list args);
 int print_S(va_list args, char *buffer);
-int write_char(char *buffer, char c);
 int write_hex(char *buffer, char c);
 void write_buffer(void);
-int handle_conversion_specifier(const char **format, va_list *args, int *printed);
 int handle_specifier(void);
 int print_binary(unsigned int num, char *buffer);
 int print_string(const char *str, char *buffer);
 int print_argument(const char **format, va_list args);
 
 #endif /* PRINTF_H */
+
+#ifndef HANDLE_CONVERSION_SPECIFIER
+#define HANDLE_CONVERSION_SPECIFIER
+
+int handle_conversion_specifier(const char **format, va_list *args, int *chars_printed);
+
+#endif
+
+#ifndef WRITE_CHAR
+#define WRITE_CHAR
+
+int write_char(char *buffer, char c);
+
+#endif
